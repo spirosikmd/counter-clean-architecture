@@ -11,3 +11,7 @@ export function increment(counter: Counter): Counter {
 export function decrement(counter: Counter): Counter {
   return createCounter(counter - 1);
 }
+
+export function reset(): Counter {
+  return createCounter(0);
+}

@@ -8,9 +8,14 @@ type DecrementAction = {
   type: CounterActionTypes.DECREMENT
 };
 
-export type CounterAction = 
+type ResetAction = {
+  type: CounterActionTypes.RESET
+};
+
+export type CounterAction =
   IncrementAction
-  | DecrementAction;
+  | DecrementAction
+  | ResetAction;
 
 export function increment(): IncrementAction {
   return {
@@ -21,5 +26,11 @@ export function increment(): IncrementAction {
 export function decrement(): DecrementAction {
   return {
     type: CounterActionTypes.DECREMENT
+  };
+}
+
+export function reset(): ResetAction {
+  return {
+    type: CounterActionTypes.RESET
   };
 }

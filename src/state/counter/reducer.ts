@@ -1,4 +1,4 @@
-import { Counter, createCounter, increment, decrement } from '../../entities/Counter';
+import { Counter, createCounter, increment, decrement, reset } from '../../entities/Counter';
 import { CounterAction } from './actions';
 import { CounterActionTypes } from './types';
 
@@ -12,6 +12,8 @@ export function counterReducer (state: CounterState = initialState, action: Coun
       return increment(state);
     case CounterActionTypes.DECREMENT:
       return decrement(state);
+    case CounterActionTypes.RESET:
+      return reset();
     default:
       return state;
   }

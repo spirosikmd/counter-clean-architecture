@@ -24,6 +24,10 @@ export const CounterWidget = (props: CounterWidgetProps) => {
         <button onClick={changeCounterInteractor.decrement}>
           -
         </button>
+
+        <button onClick={changeCounterInteractor.reset}>
+          reset
+        </button>
       </div>
     </div>
   );

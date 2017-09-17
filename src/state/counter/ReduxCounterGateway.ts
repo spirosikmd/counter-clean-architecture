@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 
 import { CounterGateway } from '../../useCases/CounterGateway';
-import { increment, decrement } from './actions';
+import { increment, decrement, reset } from './actions';
 
 export function createReduxCounterGateway (dispatch: Dispatch<{}>): CounterGateway {
   return {
@@ -11,6 +11,10 @@ export function createReduxCounterGateway (dispatch: Dispatch<{}>): CounterGatew
 
     decrement () {
       dispatch(decrement());
+    },
+
+    reset() {
+      dispatch(reset());
     }
   };
 }
